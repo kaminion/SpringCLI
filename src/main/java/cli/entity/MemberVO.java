@@ -1,4 +1,4 @@
-package cli;
+package cli.entity;
 
 import lombok.*;
 

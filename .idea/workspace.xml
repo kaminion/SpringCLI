@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3cfe7c25-8674-4c2d-9c06-57eeda904d4e" name="Default Changelist" comment="" />
+    <list default="true" id="3cfe7c25-8674-4c2d-9c06-57eeda904d4e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cli/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cli/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cli/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cli/dao/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cli/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cli/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cli/entity/MemberVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cli/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cli/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cli/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cli/Dao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cli/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cli/Main.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +28,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -24,9 +40,10 @@
   </component>
   <component name="ProjectId" id="1WTgXMwXQDMLtcuGRzTbE0TpNN5" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Spring" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -56,11 +73,13 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="cli.Main" />
-      <module name="springcliproject" />
+      <module name="cliproject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cli.*" />
+          <option name="PATTERN" value="cli.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -85,10 +104,26 @@
       <option name="presentableId" value="Default" />
       <updated>1579179036437</updated>
       <workItem from="1579179040915" duration="6176000" />
+      <workItem from="1579485239064" duration="4408000" />
+      <workItem from="1579566399411" duration="2770000" />
+      <workItem from="1579597999089" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

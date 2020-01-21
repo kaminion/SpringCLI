@@ -1,12 +1,11 @@
-package cli;
+package cli.dao;
 
+import cli.entity.MemberVO;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -34,12 +33,13 @@ public class Dao {
 
     }
 
-
+//    메서드레벨에서도 선언가능
+    @Transactional
     public void insert() throws SQLException {
         Statement statement = con.getConnection().createStatement();
 
         statement.executeUpdate("INSERT INTO member(username, password) VALUES('ahn', '1234')");
-//        throw new RuntimeException("db Error");
+        throw new RuntimeException("db Error");
     }
 
     public void print()

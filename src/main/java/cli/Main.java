@@ -1,5 +1,7 @@
 package cli;
 
+import cli.config.AppConfig;
+import cli.dao.Dao;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.SQLException;
@@ -13,7 +15,13 @@ public class Main {
 
         Dao dao = context.getBean(Dao.class);
         dao.createTable();
-        dao.insert();
+
+        try{
+            dao.insert();
+        }catch(SQLException e)
+        {
+            dao.print();
+        }
         dao.print();
 
         context.close();
