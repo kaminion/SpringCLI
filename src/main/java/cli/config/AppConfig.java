@@ -1,17 +1,21 @@
 package cli.config;
 
-import cli.dao.Dao;
+import cli.controller.MemberController;
+import cli.dao.MemberDao;
+import cli.service.MemberService;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
+import java.lang.reflect.Member;
 
 @Configuration
 @PropertySource("classpath:application.properties")
@@ -42,9 +46,27 @@ public class AppConfig {
     }
 
     @Bean
-    public Dao dao(DataSource connection)
+    public JdbcTemplate jdbcTemplate(DataSource dataSource)
     {
-        return new Dao(connection);
+        return new JdbcTemplate(dataSource);
     }
+
+//    @Bean
+//    public MemberDao dao(DataSource connection)
+//    {
+//        return new MemberDao(connection);
+//    }
+
+    @Bean
+    public MemberDao dao(JdbcTemplate jdbcTemplate)
+    {
+        return new MemberDao(jdbcTemplate);
+    }
+
+    @Bean
+    public MemberService service(MemberDao dao) { return new MemberService(dao); }
+
+    @Bean
+    public MemberController controller(MemberService service) { return new MemberController(service); }
 
 }
